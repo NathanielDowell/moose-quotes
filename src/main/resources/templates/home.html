@@ -9,5 +9,19 @@
 <h1>Moose Quotes on Demand!</h1>
 <h3>(but don't demand just yet)</h3>
 
+
+    <div id="quote-container"></div>
+    <br>
+    <button onclick="mooseQuoteFill()">Get Quote!</button>
+
 </body>
+<script>
+    console.log("All I want for Christmas is a moose.");
+
+
+    function mooseQuoteFill() {
+        document.getElementById("quote-container").innerHTML = "A moose walked into a bar.  The bar was shattered."
+    }
+
+</script>
 </html>

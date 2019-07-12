@@ -11,11 +11,11 @@ public class Quote {
     @GeneratedValue
     private long id;
 
-    @Column (nullable = false)
+    @Column (nullable = false, unique = true)
     private String quote;
 
-    @Column
-    private boolean approved;
+//    @Column
+//    private boolean approved;
 
     @ManyToOne
     @JsonManagedReference
@@ -30,9 +30,27 @@ public class Quote {
     }
 
 
+    public long getId() {
+        return id;
+    }
 
+    public String getQuote() {
+        return quote;
+    }
 
+    public User getAuthor() {
+        return author;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public void setQuote(String quote) {
+        this.quote = quote;
+    }
 
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 }
